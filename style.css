@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    box-sizing: border-box;
+}
+
+img { 
+    max-width: 100%; 
+    height: auto; 
+}
+
+html{
+    background-color: #FFF8F5;
+}
+
+
+
+
+form {
+    margin: 50px auto;
+    width: clamp(250px, 50%, 500px);
+    border: dotted 1px lightgrey;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(154,160,185,.05), 0 15px 40px rgba(166,173,201,.2);
+
+}
+
+h1 {
+    color: #534a48d9;
+    text-align: center;
+}
+
+h1::before,
+h1::after{
+    content: ' ✨ ';
+
+}
+
+
+label {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 10px 0px 5px;
+    color: #675b59;
+}
+
+label.required::after{
+    content: '*';
+    color:#e34e4e;
+    font-size: 16px;
+}
+
+input,
+select{
+    height: 45px;
+    padding: 10px;
+    border-radius: 9px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px 0px #F3ECE9;
+    border-bottom: solid 4px #F3ECE9;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 18px;
+    color: #675d5b;
+    caret-color: #675d5b;
+    transition: 0.2s;
+}
+select#country {
+    overflow: visible;
+    padding: 5px 10px;
+}
+input:hover{
+    box-shadow: 0px 0px 1px 0px #beada9;
+    border-bottom: solid 4px #beada986;
+}
+
+.inputwrapper{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+span.error{
+    /* border: solid 1px lime; */
+    height: 15px;
+    padding: 0px 5px;
+    margin-top:3px;
+    font-size: 12px;
+
+}
+
+fieldset{
+    border: 0;
+}
+
+fieldset input {
+    margin-bottom: 10px;
+}
+
+input:user-invalid {
+    border-bottom: solid 4px #e34e4e;
+    background-color: #e34e4e1f;
+}
+
+input:user-invalid + span{
+  color: #e34e4e;
+}
+
+input:user-invalid + span::before{
+    content: '✖ ';
+    color: #e34e4e;
+}
+
+
+
+
+/* 
+will need to swap label and input 
+input:user-invalid + label{
+     color: #e34e4e;
+} */
+
+
+input:user-valid,
+select:user-valid{
+    border-bottom: solid 4px #569030;
+    /* color: #569030; */
+}
+
+
+
+button,
+input[type="reset"] {
+    height: 45px ;
+    padding: 5px 10px;
+    border-radius: 9px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    border: 0;
+    width: -webkit-fill-available;
+    background-color: #d6c3be;
+    box-shadow: 0px 0px 3px 0px #F3ECE9;
+    border-bottom: solid 4px #c2b1ac;
+    transition: 0.2s;
+   
+}
+
+button:hover{
+    background-color: #beada9;
+}
+
+.buttonwrapper{
+    display: flex;
+    gap: 10px;
+    margin: 20px 0px;
+}
